@@ -22,6 +22,9 @@
     "@chakra-ui/nuxt": "^0.0.10",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@nuxtjs/emotion": "^0.0.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.11.0",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {

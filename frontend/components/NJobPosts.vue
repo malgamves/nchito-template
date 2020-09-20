@@ -1,8 +1,8 @@
 <template>
   <c-stack spacing="5" my="8" mx="auto" :max-w="['90vw', '90vw', '4xl']">
     <c-stack
-      v-for="(job, i) in jobs"
-      :key="i"
+      v-for="job in jobs"
+      :key="job.id"
       px="6"
       py="4"
       shadow="sm"
@@ -45,11 +45,25 @@
 </template>
 
 <script>
-import jobs from '../jobs.json'
+import { jobQuery } from '~/graphql/query'
 
 export default {
-  computed: {
-    jobs: () => jobs
+  data () {
+    return {
+      jobs: [],
+      query: ''
+    }
+  },
+  apollo: {
+    jobs: {
+      query: jobQuery,
+      /* variables () {
+        return {
+          Page: this.title
+        }
+      }, */
+      prefetch: true
+    }
   }
 }
 </script>
