@@ -55,7 +55,8 @@ export default {
     // Doc: https://github.com/chakra-ui/chakra-ui-vue/tree/develop/packages/nuxt-chakra
     // Doc: https://github.com/nuxt-community/emotion-module#readme
     '@chakra-ui/nuxt',
-    '@nuxtjs/emotion'
+    '@nuxtjs/emotion',
+    '@nuxtjs/apollo'
   ],
   chakra: {
     icons: {
@@ -67,7 +68,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://localhost:1337/graphql'
+        httpEndpoint: 'http://localhost:1338/graphql'
       }
     }
   },

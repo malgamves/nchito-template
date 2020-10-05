@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
 export const jobQuery = gql`
-query {
+query jobs {
   jobs {
     id
     title
